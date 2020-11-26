@@ -1,0 +1,268 @@
+/************************
+GRID SYSTEM FOR EASY MANAGEMENT :)
+*************************/
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container,
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-8,
+.col-9,
+.col-10,
+.col-12,
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+
+    .col-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .col-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* @media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+} */
+  
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    header .container {
+        max-width: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    header .container {
+        max-width: none;
+    }
+}
+
+/*********************
+HEADER
+**********************/
+header.container-fluid {
+    background-color: #30475e;
+}
+
+/*********************
+NAV BAR
+**********************/
+.nav {
+    min-height: 50px;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .nav-header {
+    display: flex;
+    align-items: center;
+    color: #f05454
+}
+
+.nav .nav-header .logo-text {
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.nav .nav-header .logo {
+    height: 70px;
+}
+
+.nav .nav-btn {
+    z-index: 9999;
+    display: none;
+}
+
+.nav .nav-links {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+  
+@media (max-width: 768px) {
+
+    header .col-12 {
+        padding: 0;
+    }
+
+    
+    .nav .nav-header {
+        margin-left: 15px;
+    }
+    
+    .nav .nav-btn {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .nav .nav-btn label {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        width: 60px;
+        padding: 12px;
+        transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+    }
+
+    .nav .nav-btn label span {
+        background-color: #fff;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: all .2s ease-in-out;
+    }
+
+    .nav .nav-btn label:hover,
+    .nav #nav-check:checked ~ .nav-btn label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(1) {
+        transform: translateY(12px) rotate(135deg);
+    }
+
+    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(2) {
+        transform: scale(0);
+    }
+
+    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(3) {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+
+    .nav .nav-links {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: #30475e;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 0px;
+        left: 0px;
+
+    }
+
+    .nav .nav-links a {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .nav #nav-check:not(:checked) .nav-links {
+        height: 0px;
+    }
+    .nav #nav-check:checked ~ .nav-links {
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+
+}
