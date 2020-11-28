@@ -77,6 +77,11 @@ body {
     max-width: 100%;
 }
 
+.img-responsive  {
+    max-width: 100%;
+    height: auto;
+}
+
 /* @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -265,4 +270,100 @@ NAV BAR
         overflow-y: hidden;
     }
 
+}
+
+/*********************
+MAIN PAGE COVER
+**********************/
+.cover {
+    height:80vh;
+    background-image: url('../img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cover .title {
+    margin-top:0;
+    color: #FFF;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+.cover .subtitle {
+    margin-top: 0;
+    font-size: 2.3em;
+    color: #d1d1d1
+}
+
+.home-section {
+    padding: 70px 0;
+}
+
+.home-section .title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.home-section .title:after {
+    content: "";
+    width: 50px;
+    border-bottom: #f05454 5px solid;
+}
+
+.home-section .carousel .item {
+    border: 1px solid #30475e;
+    height: 100%;
+}
+
+.home-section .carousel .item .img {
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+}
+
+.home-section .carousel .item .description h4 {
+    margin:0;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.home-section .carousel .item .description p {
+    margin: 0;
+    padding-top:5px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.home-section .arrows {
+    display: flex;
+    margin-top: 20px;
+}
+
+.home-section .arrows .carousel-nav-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.featured-artists {
+    background: #dddddd;
+}
+
+.featured-albums {
+    background: #30475e;
+    color: #fff;
+}
+
+.featured-albums .carousel .item {
+    border-color: #dddddd;
+}
+
+.featured-musics {
+    background: #dddddd;
 }
