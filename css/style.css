@@ -82,6 +82,10 @@ body {
     height: auto;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -140,7 +144,8 @@ NAV BAR
 .nav .nav-header {
     display: flex;
     align-items: center;
-    color: #f05454
+    color: #f05454;
+    text-decoration: none;
 }
 
 .nav .nav-header .logo-text {
@@ -271,6 +276,39 @@ NAV BAR
     }
 
 }
+
+/*********************
+FOOTER
+**********************/
+
+footer {
+    background: #222831;
+    padding: 40px 0;
+    color: #fff
+}
+
+footer .text {
+    margin: 15px 0 40px 0;
+    font-size: 1.2rem;
+}
+
+footer .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer .socials a {
+    margin: 0 15px;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+footer .socials a:hover {
+    color: #f05454;
+}
+
 
 /*********************
 MAIN PAGE COVER
