@@ -355,6 +355,32 @@ MAIN PAGE COVER
     border-bottom: #f05454 5px solid;
 }
 
+.home-section .carousel-row {
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.home-section .carousel .slide {
+    transition: all 0.4s;
+}
+
+.home-section .carousel .slide:not(.hide) {
+    flex: 1 0 25%;
+}
+
+@media (max-width: 768px) {
+    .home-section .carousel .slide:not(.hide) {
+        flex: 1 0 100%;
+    }
+}
+
+.home-section .carousel .slide.hide {
+    flex-basis: 0px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+}
+
 .home-section .carousel .item {
     border: 1px solid #30475e;
     height: 100%;
@@ -384,6 +410,17 @@ MAIN PAGE COVER
     margin-top: 20px;
 }
 
+.home-section .carousel .carousel-arrow-left,
+.home-section .carousel .carousel-arrow-right {
+    border: 0;
+    background: none;
+}
+
+.home-section .carousel .carousel-arrow-left:focus,
+.home-section .carousel .carousel-arrow-right:focus {
+    outline:0;
+}
+
 .home-section .arrows .carousel-nav-icon {
     height: 48px;
     width: 48px;
@@ -405,3 +442,32 @@ MAIN PAGE COVER
 .featured-musics {
     background: #dddddd;
 }
+
+/*********************
+ABOUT PAGE
+**********************/
+.about {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.about h1 {
+    margin-top: 0;
+}
+
+.about .img-responsive {
+    margin-top: 7px;
+}
+
+.about h1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1:after {
+    content: "";
+    width: 50px;
+    border-bottom: #f05454 5px solid;
+}
+
