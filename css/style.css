@@ -159,7 +159,7 @@ NAV BAR
 }
 
 .nav .nav-btn {
-    z-index: 9999;
+    z-index: 99999;
     display: none;
 }
 
@@ -201,7 +201,11 @@ NAV BAR
         margin-right: 15px;
         display: flex;
         align-items: center;
-        position: relative;
+    }
+
+    .nav #nav-check:checked ~ .nav-btn {
+        position: fixed;
+        right: 0;
     }
 
     .nav .nav-btn label {
@@ -243,7 +247,7 @@ NAV BAR
     }
 
     .nav .nav-links {
-        position: absolute;
+        position: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -256,7 +260,7 @@ NAV BAR
         overflow-y: hidden;
         top: 0px;
         left: 0px;
-
+        z-index: 9999;
     }
 
     .nav .nav-links a {

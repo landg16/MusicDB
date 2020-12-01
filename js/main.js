@@ -35,16 +35,31 @@ router
     .add(/about/, about)
     .add('', index) // this should always be last
 
+window.onload = function() {
+    const navigation = document.getElementsByClassName('nav-link')
+    console.log(navigation)
+    for(let i = 0; i < navigation.length; i++) {
+        navigation[i].onclick = function() {
+            console.log('clicked')
+            document.getElementById('nav-check').checked = false
+        }
+    }
+}
+
+function getWidth() {
+    return parseFloat(getComputedStyle(document.body, null).width.replace("px", "")) // for accurate width
+}
+
 function slider(id) {
     const sliderContainer = document.getElementById(id)
     const slides = sliderContainer.getElementsByClassName('slide')
-    let count = (window.innerWidth < 768) ? 1 : 4
+    let count = (getWidth() < 768) ? 1 : 4
     let current = 0
 
     addHide(slides, current, count)
-    
+
     window.addEventListener("resize", function() {
-        count = (window.innerWidth < 768) ? 1 : 4
+        count = (getWidth() < 768) ? 1 : 4
         addHide(slides, current, count)
     })
 
