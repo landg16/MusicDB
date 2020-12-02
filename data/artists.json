@@ -1,0 +1,68 @@
+{
+    "data": [
+        {
+            "name": "Kanye West",
+            "img": "kanye_west.jpg"
+        },
+        {
+            "name": "Eminem",
+            "img": "eminem.jpg"
+        },
+        {
+            "name": "Kid Laroi",
+            "img": "kid_laroi.jpg"
+        },
+        {
+            "name": "The Weeknd",
+            "img": "the_weeknd.jpg"
+        },
+        {
+            "name": "Justin Bieber",
+            "img": "justin_bieber.jpg"
+        },
+        {
+            "name": "Mac Miller",
+            "img": "mac_miller.jpg"
+        },
+        {
+            "name": "Lana Del Rey",
+            "img": "lana_del_rey.jpg"
+        },
+        {
+            "name": "Juice WRLD",
+            "img": "juice_wrld.jpg"
+        },
+        {
+            "name": "Eric Clapton",
+            "img": "eric_clapton.jpg"
+        },
+        {
+            "name": "Billie Eiish",
+            "img": "billie_eilish.jpg"
+        },
+        {
+            "name": "Kid Cudi",
+            "img": "kid_cudi.jpg"
+        },
+        {
+            "name": "Travis Scott",
+            "img": "travis_scott.jpg"
+        },
+        {
+            "name": "Doja Cat",
+            "img": "doja_cat.jpg"
+        },
+        {
+            "name": "Post Malone",
+            "img": "post_malone.jpg"
+        },
+        {
+            "name": "Lil Tecca",
+            "img": "lil_tecca.jpg"
+        },
+        {
+            "name": "Dua Lipa",
+            "img": "dua_lipa.jpg"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "artist_name": "Kanye West",
+            "album_name": "JESUS IS KING",
+            "img": "jesus_is_king.jpg"
+        },
+        {
+            "artist_name": "Eminem",
+            "album_name": "Music To Be Murdered By",
+            "img": "music_to_be_murdered_by.jpg"
+        },
+        {
+            "artist_name": "Kid Laroi",
+            "album_name": "FUCK LOVE",
+            "img": "fuck_love.jpg"
+        },
+        {
+            "artist_name": "The Weeknd",
+            "album_name": "After Hours",
+            "img": "after_hours.jpg"
+        },
+        {
+            "artist_name": "Justin Bieber",
+            "album_name": "Changes",
+            "img": "changes.jpg"
+        },
+        {
+            "artist_name": "Mac Miller",
+            "album_name": "Circles",
+            "img": "circles.jpg"
+        },
+        {
+            "artist_name": "Lana Del Rey",
+            "album_name": "Born To Die",
+            "img": "born_to_die.jpg"
+        },
+        {
+            "artist_name": "Juice WRLD",
+            "album_name": "Death Race For Love",
+            "img": "death_race_for_love.jpg"
+        },
+        {
+            "artist_name": "Eric Clapton",
+            "album_name": "The best of Eric Clapton",
+            "img": "the_best_of_eric_clapton.jpg"
+        },
+        {
+            "artist_name": "Billie Eiish",
+            "album_name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+            "img": "billie_eilish_album.jpg"
+        },
+        {
+            "artist_name": "Kid Cudi",
+            "album_name": "KIDS SEE GHOSTS",
+            "img": "kids_see_ghosts.jpg"
+        },
+        {
+            "artist_name": "Travis Scott",
+            "album_name": "ASTROWORLD",
+            "img": "astroworld.jpg"
+        },
+        {
+            "artist_name": "Doja Cat",
+            "album_name": "Hot Pink",
+            "img": "hot_pink.jpg"
+        },
+        {
+            "artist_name": "Post Malone",
+            "album_name": "beerbongs & bentleys",
+            "img": "beerbongs_bentleys.jpg"
+        },
+        {
+            "artist_name": "Lil Tecca",
+            "album_name": "We Love You Tecca",
+            "img": "we_love_you_tecca.jpg"
+        },
+        {
+            "artist_name": "Dua Lipa",
+            "album_name": "Future Nostalgia",
+            "img": "future_nostalgia.jpg"
+        }
+    ]
+}

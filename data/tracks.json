@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "artist_name": "Kanye West",
+            "track_name": "Closed on Sunday",
+            "album_name": "JESUS IS KING",
+            "img": "jesus_is_king.jpg"
+        },
+        {
+            "artist_name": "Eminem",
+            "track_name": "Godzilla",
+            "album_name": "Music To Be Murdered By",
+            "img": "music_to_be_murdered_by.jpg"
+        },
+        {
+            "artist_name": "Kid Laroi",
+            "track_name": "Without You",
+            "album_name": "FUCK LOVE",
+            "img": "fuck_love.jpg"
+        },
+        {
+            "artist_name": "The Weeknd",
+            "track_name": "Save Your Tears",
+            "album_name": "After Hours",
+            "img": "after_hours.jpg"
+        },
+        {
+            "artist_name": "Justin Bieber",
+            "track_name": "Yummy",
+            "album_name": "Changes",
+            "img": "changes.jpg"
+        },
+        {
+            "artist_name": "Mac Miller",
+            "track_name": "Good News",
+            "album_name": "Circles",
+            "img": "circles.jpg"
+        },
+        {
+            "artist_name": "Lana Del Rey",
+            "track_name": "Blue Jeans",
+            "album_name": "Born To Die",
+            "img": "born_to_die.jpg"
+        },
+        {
+            "artist_name": "Juice WRLD",
+            "track_name": "Robbery",
+            "album_name": "Death Race For Love",
+            "img": "death_race_for_love.jpg"
+        },
+        {
+            "artist_name": "Eric Clapton",
+            "track_name": "Tears in Heaven",
+            "album_name": "The best of Eric Clapton",
+            "img": "the_best_of_eric_clapton.jpg"
+        },
+        {
+            "artist_name": "Billie Eiish",
+            "track_name": "Bad Guy",
+            "album_name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+            "img": "billie_eilish_album.jpg"
+        },
+        {
+            "artist_name": "Kid Cudi",
+            "track_name": "Reborn",
+            "album_name": "KIDS SEE GHOSTS",
+            "img": "kids_see_ghosts.jpg"
+        },
+        {
+            "artist_name": "Travis Scott",
+            "track_name": "SICKO MODE",
+            "album_name": "ASTROWORLD",
+            "img": "astroworld.jpg"
+        },
+        {
+            "artist_name": "Doja Cat",
+            "track_name": "Say So",
+            "album_name": "Hot Pink",
+            "img": "hot_pink.jpg"
+        },
+        {
+            "artist_name": "Post Malone",
+            "track_name": "Better Now",
+            "album_name": "beerbongs & bentleys",
+            "img": "beerbongs_bentleys.jpg"
+        },
+        {
+            "artist_name": "Lil Tecca",
+            "track_name": "Ransom",
+            "album_name": "We Love You Tecca",
+            "img": "we_love_you_tecca.jpg"
+        },
+        {
+            "artist_name": "Dua Lipa",
+            "track_name": "Levitating",
+            "album_name": "Future Nostalgia",
+            "img": "future_nostalgia.jpg"
+        }
+    ]
+}
