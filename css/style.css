@@ -381,9 +381,15 @@ MAIN PAGE COVER
 .home-section .carousel .slide.hide {
     flex-basis: 0px;
     overflow: hidden;
+
     border: 0;
     padding: 0;
 }
+
+.home-section .carousel .slide.hide h4,
+.home-section .carousel .slide.hide p {
+    display: none;
+} 
 
 .home-section .carousel .item {
     border: 1px solid #30475e;
@@ -396,17 +402,21 @@ MAIN PAGE COVER
     height: 200px;
 }
 
+.home-section .carousel .item .description {
+    padding: 10px 15px;
+}
+
 .home-section .carousel .item .description h4 {
     margin:0;
-    padding-left: 15px;
-    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .home-section .carousel .item .description p {
     margin: 0;
     padding-top:5px;
-    padding-left: 15px;
-    padding-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .home-section .arrows {
