@@ -55,6 +55,11 @@ const index = function() {
             }
         })
         slider('featuredTracks')
+
+        // Kanye REST!!!
+        getData('https://api.kanye.rest/', function(data) {
+            document.getElementsByClassName('subtitle')[0].textContent = data.quote + " - Kanye West"
+        })
     });
 }
 
