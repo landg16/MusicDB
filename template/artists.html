@@ -1,0 +1,34 @@
+<section class="artists">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-6">
+                <h1>All Artists</h1>
+            </div>
+            <div class="col-6 sort">
+                Sort By:
+                <div class="select-dropdown">
+                    <select id="sortArtists">
+                        <option selected disabled>Select</option>
+                        <option value="name">Name</option>
+                        <option value="year">Year Born</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="list">
+        </div>
+    </div>
+</section>
+
+<template id="item">
+    <div class="col-3">
+        <div class="item">
+            <div class="img"></div>
+            <div class="description">
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</template>

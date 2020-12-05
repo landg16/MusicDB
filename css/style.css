@@ -1,13 +1,16 @@
 /************************
 GRID SYSTEM FOR EASY MANAGEMENT :)
 *************************/
+
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
-*, ::after, ::before {
+*,
+ ::after,
+ ::before {
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
 }
@@ -44,32 +47,26 @@ body {
 }
 
 @media (min-width: 768px) {
-
     .col-3 {
         flex: 0 0 25%;
         max-width: 25%;
     }
-
     .col-4 {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-
     .col-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
     .col-8 {
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-
     .col-9 {
         flex: 0 0 75%;
         max-width: 75%;
     }
-
 }
 
 .col-12 {
@@ -77,7 +74,12 @@ body {
     max-width: 100%;
 }
 
-.img-responsive  {
+
+/*******************
+GLOBAL STYLES
+********************/
+
+.img-responsive {
     max-width: 100%;
     height: auto;
 }
@@ -86,24 +88,46 @@ body {
     text-align: center;
 }
 
-/* @media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-} */
-  
+.item {
+    border: 1px solid #30475e;
+    height: 100%;
+}
+
+.item .img {
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+}
+
+.item .description {
+    padding: 10px 15px;
+}
+
+.item .description h4 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.item .description p {
+    margin: 0;
+    padding-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
     }
 }
-  
+
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
     }
 }
-  
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
@@ -122,16 +146,66 @@ body {
     }
 }
 
+.select-dropdown,
+.select-dropdown * {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.select-dropdown {
+    display: inline-block;
+    position: relative;
+    background-color: #E6E6E6;
+    border-radius: 4px;
+}
+
+.select-dropdown select {
+    font-size: 1rem;
+    font-weight: normal;
+    max-width: 100%;
+    padding: 8px 24px 8px 10px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-dropdown select:active,
+.select-dropdown select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.select-dropdown:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 0;
+    height: 0;
+    margin-top: -2px;
+    border-top: 5px solid #aaa;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+
 /*********************
 HEADER
 **********************/
+
 header.container-fluid {
     background-color: #30475e;
 }
 
+
 /*********************
 NAV BAR
 **********************/
+
 .nav {
     min-height: 50px;
     width: 100%;
@@ -178,36 +252,30 @@ NAV BAR
     color: #efefef;
 }
 
-.nav > .nav-links > a:hover {
+.nav>.nav-links>a:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.nav > #nav-check {
+.nav>#nav-check {
     display: none;
 }
-  
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
     header .col-12 {
         padding: 0;
     }
-
-    
     .nav .nav-header {
         margin-left: 15px;
     }
-    
     .nav .nav-btn {
         margin-right: 15px;
         display: flex;
         align-items: center;
     }
-
-    .nav #nav-check:checked ~ .nav-btn {
+    .nav #nav-check:checked~.nav-btn {
         position: fixed;
         right: 0;
     }
-
     .nav .nav-btn label {
         cursor: pointer;
         display: inline-block;
@@ -218,7 +286,6 @@ NAV BAR
         -moz-transition: all .2s ease-in-out;
         -webkit-transition: all .2s ease-in-out;
     }
-
     .nav .nav-btn label span {
         background-color: #fff;
         border-radius: 3px;
@@ -228,24 +295,19 @@ NAV BAR
         margin: 7px 0;
         transition: all .2s ease-in-out;
     }
-
     .nav .nav-btn label:hover,
-    .nav #nav-check:checked ~ .nav-btn label {
+    .nav #nav-check:checked~.nav-btn label {
         background-color: rgba(0, 0, 0, 0.3);
     }
-
-    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(1) {
+    .nav #nav-check:checked~.nav-btn label .burger-bar:nth-of-type(1) {
         transform: translateY(12px) rotate(135deg);
     }
-
-    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(2) {
+    .nav #nav-check:checked~.nav-btn label .burger-bar:nth-of-type(2) {
         transform: scale(0);
     }
-
-    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(3) {
+    .nav #nav-check:checked~.nav-btn label .burger-bar:nth-of-type(3) {
         transform: translateY(-12px) rotate(-135deg);
     }
-
     .nav .nav-links {
         position: fixed;
         display: flex;
@@ -262,24 +324,22 @@ NAV BAR
         left: 0px;
         z-index: 9999;
     }
-
     .nav .nav-links a {
         display: block;
         width: 100%;
         margin-right: 0;
         margin-top: 10px;
     }
-
     .nav #nav-check:not(:checked) .nav-links {
         height: 0px;
     }
-    .nav #nav-check:checked ~ .nav-links {
+    .nav #nav-check:checked~.nav-links {
         width: 100%;
         height: 100vh;
         overflow-y: hidden;
     }
-
 }
+
 
 /*********************
 FOOTER
@@ -317,8 +377,9 @@ footer .socials a:hover {
 /*********************
 MAIN PAGE COVER
 **********************/
+
 .cover {
-    height:80vh;
+    height: 80vh;
     background-image: url('../img/cover.jpg');
     background-position: center;
     background-size: cover;
@@ -329,7 +390,7 @@ MAIN PAGE COVER
 }
 
 .cover .title {
-    margin-top:0;
+    margin-top: 0;
     color: #FFF;
     font-size: 4em;
     text-transform: uppercase;
@@ -384,7 +445,6 @@ MAIN PAGE COVER
 .home-section .carousel .slide.hide {
     flex-basis: 0px;
     overflow: hidden;
-
     border: 0;
     padding: 0;
 }
@@ -392,34 +452,6 @@ MAIN PAGE COVER
 .home-section .carousel .slide.hide h4,
 .home-section .carousel .slide.hide p {
     display: none;
-} 
-
-.home-section .carousel .item {
-    border: 1px solid #30475e;
-    height: 100%;
-}
-
-.home-section .carousel .item .img {
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-}
-
-.home-section .carousel .item .description {
-    padding: 10px 15px;
-}
-
-.home-section .carousel .item .description h4 {
-    margin:0;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.home-section .carousel .item .description p {
-    margin: 0;
-    padding-top:5px;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .home-section .arrows {
@@ -435,7 +467,7 @@ MAIN PAGE COVER
 
 .home-section .carousel .carousel-arrow-left:focus,
 .home-section .carousel .carousel-arrow-right:focus {
-    outline:0;
+    outline: 0;
 }
 
 .home-section .arrows .carousel-nav-icon {
@@ -460,9 +492,11 @@ MAIN PAGE COVER
     background: #dddddd;
 }
 
+
 /*********************
 ABOUT PAGE
 **********************/
+
 .about {
     margin-top: 150px;
     margin-bottom: 150px;
@@ -488,3 +522,17 @@ ABOUT PAGE
     border-bottom: #f05454 5px solid;
 }
 
+
+/*********************
+ARTISTS PAGE
+**********************/
+
+.artists {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.artists .sort {
+    margin-top: 18px;
+    text-align: right;
+}

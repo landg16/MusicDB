@@ -1,68 +1,83 @@
 {
-    "data": [
-        {
+    "data": [{
             "name": "Kanye West",
-            "img": "kanye_west.jpg"
+            "img": "kanye_west.jpg",
+            "year": 1984
         },
         {
             "name": "Eminem",
-            "img": "eminem.jpg"
+            "img": "eminem.jpg",
+            "year": 1975
         },
         {
             "name": "Kid Laroi",
-            "img": "kid_laroi.jpg"
+            "img": "kid_laroi.jpg",
+            "year": 2004
         },
         {
             "name": "The Weeknd",
-            "img": "the_weeknd.jpg"
+            "img": "the_weeknd.jpg",
+            "year": 1994
         },
         {
             "name": "Justin Bieber",
-            "img": "justin_bieber.jpg"
+            "img": "justin_bieber.jpg",
+            "year": 1995
         },
         {
             "name": "Mac Miller",
-            "img": "mac_miller.jpg"
+            "img": "mac_miller.jpg",
+            "year": 1989
         },
         {
             "name": "Lana Del Rey",
-            "img": "lana_del_rey.jpg"
+            "img": "lana_del_rey.jpg",
+            "year": 1992
         },
         {
             "name": "Juice WRLD",
-            "img": "juice_wrld.jpg"
+            "img": "juice_wrld.jpg",
+            "year": 2000
         },
         {
             "name": "Eric Clapton",
-            "img": "eric_clapton.jpg"
+            "img": "eric_clapton.jpg",
+            "year": 1960
         },
         {
             "name": "Billie Eiish",
-            "img": "billie_eilish.jpg"
+            "img": "billie_eilish.jpg",
+            "year": 2002
         },
         {
             "name": "Kid Cudi",
-            "img": "kid_cudi.jpg"
+            "img": "kid_cudi.jpg",
+            "year": 1990
         },
         {
             "name": "Travis Scott",
-            "img": "travis_scott.jpg"
+            "img": "travis_scott.jpg",
+            "year": 1994
         },
         {
             "name": "Doja Cat",
-            "img": "doja_cat.jpg"
+            "img": "doja_cat.jpg",
+            "year": 1996
         },
         {
             "name": "Post Malone",
-            "img": "post_malone.jpg"
+            "img": "post_malone.jpg",
+            "year": 1995
         },
         {
             "name": "Lil Tecca",
-            "img": "lil_tecca.jpg"
+            "img": "lil_tecca.jpg",
+            "year": 2003
         },
         {
             "name": "Dua Lipa",
-            "img": "dua_lipa.jpg"
+            "img": "dua_lipa.jpg",
+            "year": 1995
         }
     ]
 }

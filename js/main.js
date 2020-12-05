@@ -8,9 +8,28 @@ const router = new Router({
     root: '/'
 })
 
+function sortByName(a, b) {
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+
+    if (nameA < nameB) {
+        return -1;
+    }
+
+    if (nameA > nameB) {
+        return 1;
+    }
+
+    return 0;
+}
+
+function sortByYear(a, b) {
+    return b.year - a.year;
+}
+
 const index = function() {
-    fetchPage("./template/main.html", function(data) {
-        document.getElementById("page").innerHTML = data
+    fetchPage("./template/main.html", function(page) {
+        document.getElementById("page").innerHTML = page
 
         // Add data to featured artists
         let slideTemplate = document.querySelector('#slide');
@@ -69,13 +88,53 @@ const about = function() {
     });
 }
 
+const artists = function() {
+    fetchPage('./template/artists.html', function(data) {
+        document.getElementById("page").innerHTML = data;
+
+        let slideTemplate = document.querySelector('#item');
+        getData("./data/artists.json", function(data) {
+            data = data.data
+            shuffleArray(data)
+            for (let i = 0; i < data.length; i++) {
+                let clone = slideTemplate.content.cloneNode(true)
+                clone.querySelector('.img').style.backgroundImage = "url('img/artists/" + data[i].img + "')"
+                clone.querySelector('h4').style.marginBottom = "10px"
+                clone.querySelector('h4').textContent = data[i].name
+                document.getElementById('list').appendChild(clone)
+            }
+        })
+
+        document.getElementById("sortArtists").onchange = function() {
+            document.getElementById('list').innerHTML = ""
+            const value = this.value
+            getData("./data/artists.json", function(data) {
+                data = data.data
+                if (value == "name") {
+                    data.sort(sortByName)
+                } else {
+                    data.sort(sortByYear)
+                }
+                for (let i = 0; i < data.length; i++) {
+                    let clone = slideTemplate.content.cloneNode(true)
+                    clone.querySelector('.img').style.backgroundImage = "url('img/artists/" + data[i].img + "')"
+                    clone.querySelector('h4').style.marginBottom = "10px"
+                    clone.querySelector('h4').textContent = data[i].name
+                    document.getElementById('list').appendChild(clone)
+                }
+            })
+        }
+    })
+}
+
 router
+    .add(/artists/, artists)
     .add(/about/, about)
     .add('', index) // this should always be last
 
 window.onload = function() {
     const navigation = document.getElementsByClassName('nav-link')
-    for(let i = 0; i < navigation.length; i++) {
+    for (let i = 0; i < navigation.length; i++) {
         navigation[i].onclick = function() {
             document.getElementById('nav-check').checked = false
         }
@@ -115,7 +174,7 @@ function slider(id) {
 }
 
 function addHide(slides, current, count) {
-    for(let i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         if (i < current || i >= current + count) {
             slides[i].classList.add('hide')
         } else {
@@ -145,7 +204,7 @@ function getData(path, callback) {
         }
     };
     httpRequest.open('GET', path);
-    httpRequest.send(); 
+    httpRequest.send();
 }
 
 function shuffleArray(array) {
