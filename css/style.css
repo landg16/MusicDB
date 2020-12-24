@@ -9,8 +9,8 @@ body {
 }
 
 *,
- ::after,
- ::before {
+::after,
+::before {
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
 }
@@ -74,7 +74,6 @@ body {
     max-width: 100%;
 }
 
-
 /*******************
 GLOBAL STYLES
 ********************/
@@ -88,15 +87,39 @@ GLOBAL STYLES
     text-align: center;
 }
 
+.item-parent {
+    padding: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.item:hover {
+    box-shadow: 0 0 30px rgba(33,33,33,.2); 
+}
+
+.lazy {
+    background-image: url('../img/placeholder.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
 .item {
     border: 1px solid #30475e;
     height: 100%;
+    transition: 0.5s all;
+    color: #222831 !important;
 }
 
 .item .img {
     background-size: cover;
     background-position: center center;
     height: 200px;
+}
+
+@media (max-width: 768px) {
+    .item .img {
+        height: 400px;
+    }
 }
 
 .item .description {
@@ -118,7 +141,7 @@ GLOBAL STYLES
 
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: none;
     }
 }
 
@@ -157,7 +180,7 @@ GLOBAL STYLES
 .select-dropdown {
     display: inline-block;
     position: relative;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     border-radius: 4px;
 }
 
@@ -180,7 +203,7 @@ GLOBAL STYLES
 }
 
 .select-dropdown:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     right: 8px;
@@ -192,7 +215,6 @@ GLOBAL STYLES
     border-left: 5px solid transparent;
 }
 
-
 /*********************
 HEADER
 **********************/
@@ -200,7 +222,6 @@ HEADER
 header.container-fluid {
     background-color: #30475e;
 }
-
 
 /*********************
 NAV BAR
@@ -252,11 +273,11 @@ NAV BAR
     color: #efefef;
 }
 
-.nav>.nav-links>a:hover {
+.nav > .nav-links > a:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.nav>#nav-check {
+.nav > #nav-check {
     display: none;
 }
 
@@ -272,7 +293,7 @@ NAV BAR
         display: flex;
         align-items: center;
     }
-    .nav #nav-check:checked~.nav-btn {
+    .nav #nav-check:checked ~ .nav-btn {
         position: fixed;
         right: 0;
     }
@@ -282,9 +303,9 @@ NAV BAR
         vertical-align: middle;
         width: 60px;
         padding: 12px;
-        transition: all .2s ease-in-out;
-        -moz-transition: all .2s ease-in-out;
-        -webkit-transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
     }
     .nav .nav-btn label span {
         background-color: #fff;
@@ -293,19 +314,19 @@ NAV BAR
         display: block;
         height: 5px;
         margin: 7px 0;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
     .nav .nav-btn label:hover,
-    .nav #nav-check:checked~.nav-btn label {
+    .nav #nav-check:checked ~ .nav-btn label {
         background-color: rgba(0, 0, 0, 0.3);
     }
-    .nav #nav-check:checked~.nav-btn label .burger-bar:nth-of-type(1) {
+    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(1) {
         transform: translateY(12px) rotate(135deg);
     }
-    .nav #nav-check:checked~.nav-btn label .burger-bar:nth-of-type(2) {
+    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(2) {
         transform: scale(0);
     }
-    .nav #nav-check:checked~.nav-btn label .burger-bar:nth-of-type(3) {
+    .nav #nav-check:checked ~ .nav-btn label .burger-bar:nth-of-type(3) {
         transform: translateY(-12px) rotate(-135deg);
     }
     .nav .nav-links {
@@ -333,13 +354,12 @@ NAV BAR
     .nav #nav-check:not(:checked) .nav-links {
         height: 0px;
     }
-    .nav #nav-check:checked~.nav-links {
+    .nav #nav-check:checked ~ .nav-links {
         width: 100%;
         height: 100vh;
         overflow-y: hidden;
     }
 }
-
 
 /*********************
 FOOTER
@@ -348,7 +368,7 @@ FOOTER
 footer {
     background: #222831;
     padding: 40px 0;
-    color: #fff
+    color: #fff;
 }
 
 footer .text {
@@ -373,7 +393,6 @@ footer .socials a:hover {
     color: #f05454;
 }
 
-
 /*********************
 MAIN PAGE COVER
 **********************/
@@ -391,7 +410,7 @@ MAIN PAGE COVER
 
 .cover .title {
     margin-top: 0;
-    color: #FFF;
+    color: #fff;
     font-size: 4em;
     text-transform: uppercase;
     text-align: center;
@@ -409,6 +428,7 @@ MAIN PAGE COVER
     padding: 70px 0;
 }
 
+.artist .title,
 .home-section .title {
     position: relative;
     display: flex;
@@ -417,8 +437,9 @@ MAIN PAGE COVER
     margin-bottom: 30px;
 }
 
+.artist .title:after,
 .home-section .title:after {
-    content: "";
+    content: '';
     width: 50px;
     border-bottom: #f05454 5px solid;
 }
@@ -430,6 +451,7 @@ MAIN PAGE COVER
 
 .home-section .carousel .slide {
     transition: all 0.4s;
+    text-decoration: none;
 }
 
 .home-section .carousel .slide:not(.hide) {
@@ -486,12 +508,12 @@ MAIN PAGE COVER
 
 .featured-albums .carousel .item {
     border-color: #dddddd;
+    color: #fff !important;
 }
 
 .featured-musics {
     background: #dddddd;
 }
-
 
 /*********************
 ABOUT PAGE
@@ -517,17 +539,76 @@ ABOUT PAGE
 }
 
 .about h1:after {
-    content: "";
+    content: '';
     width: 50px;
     border-bottom: #f05454 5px solid;
 }
 
+/*********************
+SEARCH BAR
+**********************/
+.search {
+    background-image: url('../img/search-cover.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+}
+
+.search .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search .container .row {
+    height: 100%;
+}
+
+.search .container .row .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    min-width: 400px;
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+    border: 1px solid #222831;
+    margin-right: 20px;
+}
+
+.search input:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.search .search-btn {
+    height: 60px;
+    background: #30475e;
+    color: #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+}
+
+.not-found {
+    margin-top: 20px;
+    font-size: 22px;
+    margin-bottom: 100px;
+}
 
 /*********************
 ARTISTS PAGE
 **********************/
 
 .artists {
+    position: relative;
     margin-top: 150px;
     margin-bottom: 150px;
 }
@@ -535,4 +616,109 @@ ARTISTS PAGE
 .artists .sort {
     margin-top: 18px;
     text-align: right;
+}
+
+/*********************
+LOADER CSS
+**********************/
+
+.blur {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.4s all;
+}
+
+.blur.show {
+    height: auto;
+}
+
+.loading-grid {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.loading-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    animation: loading-grid 1.2s linear infinite;
+}
+.loading-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+.loading-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+.loading-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+.loading-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+.loading-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+.loading-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+.loading-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+.loading-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+.loading-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+@keyframes loading-grid {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/*********************
+ARTISTS PAGE
+**********************/
+
+.artist {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.artist .tracks {
+    margin-top: 50px;
 }
