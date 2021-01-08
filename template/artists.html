@@ -1,4 +1,28 @@
+<section class="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <input class="form-control" id="searchInput" placeholder="Search your favorite artist" />
+                <button class="search-btn" id="searchBtn">Search</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="artists">
+    <div class="blur" id="blur">
+        <div class="loading-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="container">
         <div class="row heading">
             <div class="col-6">
@@ -16,19 +40,18 @@
             </div>
         </div>
 
-        <div class="row" id="list">
-        </div>
+        <div class="row" id="list"></div>
     </div>
 </section>
 
 <template id="item">
-    <div class="col-3">
+    <a class="col-3 item-parent" href="">
         <div class="item">
-            <div class="img"></div>
+            <div class="img lazy"></div>
             <div class="description">
                 <h4></h4>
                 <p></p>
             </div>
         </div>
-    </div>
+    </a>
 </template>
