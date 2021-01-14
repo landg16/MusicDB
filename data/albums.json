@@ -1,84 +1,202 @@
 {
     "data": [
         {
+            "id": 1,
             "artist_name": "Kanye West",
             "album_name": "JESUS IS KING",
             "img": "jesus_is_king.jpg"
         },
         {
+            "id": 2,
+            "artist_name": "Kanye West",
+            "album_name": "Graduation",
+            "img": "graduation.jpg"
+        },
+        {
+            "id": 3,
+            "artist_name": "Kanye West",
+            "album_name": "Ye",
+            "img": "ye.jpg"
+        },
+        {
+            "id": 4,
+            "artist_name": "Kanye West",
+            "album_name": "Yeezus",
+            "img": "yeezus.png"
+        },
+        {
+            "id": 5,
             "artist_name": "Eminem",
             "album_name": "Music To Be Murdered By",
             "img": "music_to_be_murdered_by.jpg"
         },
         {
+            "id": 6,
             "artist_name": "Kid Laroi",
             "album_name": "FUCK LOVE",
             "img": "fuck_love.jpg"
         },
         {
+            "id": 7,
             "artist_name": "The Weeknd",
             "album_name": "After Hours",
             "img": "after_hours.jpg"
         },
         {
+            "id": 8,
+            "artist_name": "The Weeknd",
+            "album_name": "Starboy",
+            "img": "starboy.jpg"
+        },
+        {
+            "id": 9,
+            "artist_name": "The Weeknd",
+            "album_name": "Kiss Land",
+            "img": "kissland.png"
+        },
+        {
+            "id": 10,
             "artist_name": "Justin Bieber",
             "album_name": "Changes",
             "img": "changes.jpg"
         },
         {
+            "id": 11,
+            "artist_name": "Justin Bieber",
+            "album_name": "Believe",
+            "img": "believe.jpg"
+        },
+        {
+            "id": 12,
             "artist_name": "Mac Miller",
             "album_name": "Circles",
             "img": "circles.jpg"
         },
         {
+            "id": 13,
+            "artist_name": "Mac Miller",
+            "album_name": "Swimming",
+            "img": "swimming.jpg"
+        },
+        {
+            "id": 14,
+            "artist_name": "Mac Miller",
+            "album_name": "The Divine Feminine",
+            "img": "thedivinefeminine.jpg"
+        },
+        {
+            "id": 15,
             "artist_name": "Lana Del Rey",
             "album_name": "Born To Die",
             "img": "born_to_die.jpg"
         },
         {
+            "id": 16,
+            "artist_name": "Lana Del Rey",
+            "album_name": "Paradise",
+            "img": "paradise.png"
+        },
+        {
+            "id": 17,
             "artist_name": "Juice WRLD",
             "album_name": "Death Race For Love",
             "img": "death_race_for_love.jpg"
         },
         {
+            "id": 18,
             "artist_name": "Eric Clapton",
             "album_name": "The best of Eric Clapton",
             "img": "the_best_of_eric_clapton.jpg"
         },
         {
+            "id": 19,
+            "artist_name": "Eric Clapton",
+            "album_name": "Another Ticket",
+            "img": "anotherticket.jpg"
+        },
+        {
+            "id": 20,
+            "artist_name": "Eric Clapton",
+            "album_name": "Backless",
+            "img": "backless.jpg"
+        },
+        {
+            "id": 21,
             "artist_name": "Billie Eiish",
             "album_name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
             "img": "billie_eilish_album.jpg"
         },
         {
+            "id": 22,
+            "artist_name": "Billie Eiish",
+            "album_name": "Don't Smile at Me",
+            "img": "dontsmileatme.jpg"
+        },
+        {
+            "id": 23,
             "artist_name": "Kid Cudi",
             "album_name": "KIDS SEE GHOSTS",
             "img": "kids_see_ghosts.jpg"
         },
         {
+            "id": 24,
+            "artist_name": "Kid Cudi",
+            "album_name": "Satellite Flight: The Journey to Mother Moon",
+            "img": "satelite_flight.jpg"
+        },
+        {
+            "id": 25,
             "artist_name": "Travis Scott",
             "album_name": "ASTROWORLD",
             "img": "astroworld.jpg"
         },
         {
+            "id": 26,
+            "artist_name": "Travis Scott",
+            "album_name": "JackBoys",
+            "img": "jackboys.png"
+        },
+        {
+            "id": 27,
+            "artist_name": "Travis Scott",
+            "album_name": "Rodeo",
+            "img": "rodeo.jpg"
+        },
+        {
+            "id": 28,
             "artist_name": "Doja Cat",
             "album_name": "Hot Pink",
             "img": "hot_pink.jpg"
         },
         {
+            "id": 29,
+            "artist_name": "Doja Cat",
+            "album_name": "Purrr!",
+            "img": "purrr.jpg"
+        },
+        {
+            "id": 30,
             "artist_name": "Post Malone",
             "album_name": "beerbongs & bentleys",
             "img": "beerbongs_bentleys.jpg"
         },
         {
+            "id": 31,
             "artist_name": "Lil Tecca",
             "album_name": "We Love You Tecca",
             "img": "we_love_you_tecca.jpg"
         },
         {
+            "id": 32,
             "artist_name": "Dua Lipa",
             "album_name": "Future Nostalgia",
             "img": "future_nostalgia.jpg"
+        },
+        {
+            "id": 33,
+            "artist_name": "Dua Lipa",
+            "album_name": "Dua Lipa",
+            "img": "dua_lipa.jpg"
         }
     ]
 }
