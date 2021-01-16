@@ -3,11 +3,23 @@
         <div class="row">
             <div class="col-4">
                 <img id="image" class="img-responsive" />
+                <h3 id="name"></h3>
+                <h3 id="year"></h3>
+                <h3 id="tracks"></h3>
             </div>
             <div class="col-8">
                 <h1 id="title" class="title"></h1>
                 <p id="description"></p>
             </div>
+        </div>
+
+        <div class="row tracks">
+            <div class="col-12">
+                <h1 class="title">Artist's albums</h1>
+            </div>
+        </div>
+
+        <div class="row album">
         </div>
 
         <div class="row tracks">
@@ -22,7 +34,7 @@
 </section>
 
 <template id='track'>
-    <div class="col-3 slide">
+    <div class="col-3 slide item-parent">
         <div class="item">
             <div class="img lazy"></div>
             <div class="description">

@@ -35,7 +35,7 @@ const index = function () {
         getData('./data/artists.json', function (data) {
             data = data.data;
             shuffleArray(data);
-            for (let i = 0; i < data.length / 2; i++) {
+            for (let i = 0; i < 10; i++) {
                 createCard('featuredArtists', 'img/artists/' + data[i].img, data[i].name, data[i].year, '#/artists/' + data[i].id);
             }
         }).then(() => {
@@ -47,7 +47,7 @@ const index = function () {
         getData('./data/albums.json', function (data) {
             data = data.data;
             shuffleArray(data);
-            for (let i = 0; i < data.length / 2; i++) {
+            for (let i = 0; i < 10; i++) {
                 createCard('featuredAlbums', 'img/albums/' + data[i].img, data[i].album_name, data[i].artist_name, '#');
             }
         }).then(() => {
@@ -59,7 +59,7 @@ const index = function () {
         getData('./data/tracks.json', function (data) {
             data = data.data;
             shuffleArray(data);
-            for (let i = 0; i < data.length / 2; i++) {
+            for (let i = 0; i < 10; i++) {
                 createCard('featuredTracks', 'img/albums/' + data[i].img, data[i].track_name, data[i].artist_name + ' - ' + data[i].album_name, '#');
             }
         }).then(() => {
@@ -172,40 +172,55 @@ const artistPage = function (id) {
     fetchPage('./template/artist-details.html', function (page) {
         document.getElementById('page').innerHTML = page;
         getData('./data/artists.json', function (data) {
-            console.log(data)
             data = data.data.filter((item) => {
                 return item.id == id;
             })
             data = data[0]
             document.getElementById('title').innerHTML = data.name
+            document.getElementById('name').innerHTML = "Name: " + data.name
+            document.getElementById('year').innerHTML = "Year Born: " + data.year
+            
             document.getElementById('description').innerHTML = data.description
             document.getElementById('image').src = '/img/artists/' + data.img
 
             getData('./data/tracks.json', function(tracks) {
-                console.log(tracks)
                 tracks = tracks.data.filter((item) => {
                     return item.artist_id == id;
                 })
+                document.getElementById('tracks').innerHTML = "Total Tracks: " + (tracks.length + 1)
+
+                shuffleArray(tracks)
 
                 for(let i = 0; i < tracks.length; i++) {
-                    createCard('/img/albums/' + tracks[i].img, tracks[i].track_name, tracks[i].album_name)
+                    createCard('/img/albums/' + tracks[i].img, tracks[i].track_name, tracks[i].album_name, 'list')
                 }
-
-                console.log(tracks)
             })
             .then(() => {
                 lazyLoadImages();
             });
+
+            getData('./data/albums.json', function(albums) {
+                console.log(albums, data.name)
+                albums = albums.data.filter((item) => {
+                    return item.artist_name == data.name
+                })
+                
+                shuffleArray(albums)
+
+                for(let i = 0; i < albums.length; i++) {
+                    createCard('/img/albums/' + albums[i].img, albums[i].album_name, albums[i].artist_name, 'album')
+                }
+            })
         });
     });
 
-    function createCard(url, title, desc) {
+    function createCard(url, title, desc, listId) {
         let slideTemplate = document.querySelector('#track');
         let clone = slideTemplate.content.cloneNode(true);
         clone.querySelector('.img').dataset.src = url;
         clone.querySelector('h4').textContent = title;
         clone.querySelector('p').textContent = desc;
-        document.getElementsByClassName('list')[0].appendChild(clone);
+        document.getElementsByClassName(listId)[0].appendChild(clone);
     }
 }
 
