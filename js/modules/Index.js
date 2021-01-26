@@ -2,7 +2,7 @@ import { fetchPage, getData, shuffleArray, lazyLoadImages, slider } from './Help
 
 class Index {
     static page = function () {
-        fetchPage('./template/main.html', function (page) {
+        fetchPage('./template/index.html', function (page) {
             document.getElementById('page').innerHTML = page;
 
             let slideTemplate = document.querySelector('#slide');
@@ -33,7 +33,7 @@ class Index {
                         'img/albums/' + data[i].img,
                         data[i].album_name,
                         data[i].artist_name,
-                        '#'
+                        '#/albums/' + data[i].id
                     );
                 }
             }).then(() => {
@@ -51,7 +51,7 @@ class Index {
                         'img/albums/' + data[i].img,
                         data[i].track_name,
                         data[i].artist_name + ' - ' + data[i].album_name,
-                        '#'
+                        '#/tracks/' + data[i].id
                     );
                 }
             }).then(() => {

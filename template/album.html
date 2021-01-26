@@ -1,0 +1,37 @@
+<section class="artist">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img id="image" class="img-responsive" />
+                <h3 id="name"></h3>
+                <h3 id="year"></h3>
+                <h3 id="tracks"></h3>
+            </div>
+            <div class="col-8">
+                <h1 id="title" class="title"></h1>
+                <h4>Tracks</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Track Name</th>
+                            <th scope="col">Album Name</th>
+                            <th scope="col">Artist Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<template id="track">
+    <tr class="child">
+        <td id="id"></td>
+        <td id="track_name"></td>
+        <td id="album_name"></td>
+        <td id="artist_name"></td>
+    </tr>
+</template>

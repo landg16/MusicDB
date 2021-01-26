@@ -94,7 +94,7 @@ GLOBAL STYLES
 }
 
 .item:hover {
-    box-shadow: 0 0 30px rgba(33,33,33,.2); 
+    box-shadow: 0 0 30px rgba(33, 33, 33, 0.2);
 }
 
 .lazy {
@@ -609,7 +609,7 @@ ARTISTS PAGE
 
 .artists {
     position: relative;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 150px;
 }
 
@@ -721,4 +721,50 @@ ARTISTS PAGE
 
 .artist .tracks {
     margin-top: 50px;
+}
+
+/*********************
+ALBUMS PAGE
+**********************/
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 0.35em;
+}
+
+table tr.child:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* Zebra striping */
+table tr:nth-of-type(odd) { 
+    background: #e6e6e6; 
+}
+
+table th,
+table td {
+    padding: 0.625em;
+    text-align: center;
+}
+
+table th {
+    background-color: #f8f8f8;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
