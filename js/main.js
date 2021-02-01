@@ -3,12 +3,15 @@ import Index from './modules/Index.js'
 import About from './modules/About.js'
 import Artists from './modules/Artists.js'
 import Albums from './modules/Albums.js'
+import Tracks from './modules/Tracks.js'
 
 const router = new Router({
     root: '/',
 })
 
 router
+    .add(/tracks\/(.*)/, Tracks.detailed)
+    .add(/tracks/, Tracks.page)
     .add(/albums\/(.*)/, Albums.detailed)
     .add(/albums/, Albums.page)
     .add(/artists\/(.*)/, Artists.detailed)
