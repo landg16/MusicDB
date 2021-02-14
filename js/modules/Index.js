@@ -1,11 +1,10 @@
 import { fetchPage, getData, shuffleArray, lazyLoadImages, slider } from './Helper.js'
 
 class Index {
-    static page = function () {
+    static page() {
         fetchPage('./template/index.html', function (page) {
             document.getElementById('page').innerHTML = page;
 
-            let slideTemplate = document.querySelector('#slide');
             getData('./data/artists.json', function (data) {
                 data = data.data;
                 shuffleArray(data);

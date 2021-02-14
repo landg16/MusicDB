@@ -10,7 +10,7 @@ class Albums {
             search();
         });
 
-        function loadAlbums(keyword = null) {
+        function loadAlbums(keyword) {
             let loading = document.getElementById('blur');
             let slideTemplate = document.querySelector('#item');
             let list = document.getElementById('list');
@@ -68,7 +68,7 @@ class Albums {
         }
     }
 
-    static detailed = function (id) {
+    static detailed(id) {
         fetchPage('./template/album.html', function (page) {
             document.getElementById('page').innerHTML = page;
 

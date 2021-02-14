@@ -1,7 +1,7 @@
 import { fetchPage, getData, shuffleArray, lazyLoadImages, sortByName, sortByYear } from './Helper.js'
 
 class Artists {
-    static page = function () {
+    static page() {
         fetchPage('./template/list.html', function (data) {
             document.getElementById('page').innerHTML = data
             document.getElementById('listTitle').innerHTML = 'All Artists'
@@ -14,7 +14,7 @@ class Artists {
             search()
         })
 
-        function loadArtists(value = null, keyword = null) {
+        function loadArtists(value, keyword) {
             let loading = document.getElementById('blur')
             let slideTemplate = document.querySelector('#item')
             let list = document.getElementById('list')
@@ -79,7 +79,7 @@ class Artists {
         }
     }
 
-    static detailed = function (id) {
+    static detailed(id) {
         fetchPage('./template/artist.html', function (page) {
             document.getElementById('page').innerHTML = page
             getData('./data/artists.json', function (data) {

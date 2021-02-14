@@ -10,7 +10,7 @@ class Tracks {
             search();
         });
 
-        function loadTracks(keyword = null) {
+        function loadTracks(keyword) {
             let loading = document.getElementById('blur');
             let slideTemplate = document.querySelector('#item');
             let list = document.getElementById('list');

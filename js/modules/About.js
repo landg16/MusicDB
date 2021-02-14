@@ -1,7 +1,7 @@
 import { fetchPage } from './Helper.js'
 
 class About {
-    static page = function () {
+    static page() {
         fetchPage('./template/about.html', function (data) {
             document.getElementById('page').innerHTML = data;
         });
