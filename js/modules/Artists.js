@@ -5,6 +5,7 @@ class Artists {
         fetchPage('./template/list.html', function (data) {
             document.getElementById('page').innerHTML = data
             document.getElementById('listTitle').innerHTML = 'All Artists'
+            document.getElementById('loadMore').style.display = "none"
             loadArtists()
 
             document.getElementById('sortArtists').onchange = function () {

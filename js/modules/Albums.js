@@ -29,10 +29,47 @@ class Albums {
                     });
                 }
 
+                let dataLength = data.length;
                 let toCreate = document.createElement('div');
-                for (let i = 0; i < data.length; i++) {
+                const loadSize = 16;
+                let pagination = loadSize;
+                if (dataLength < loadSize) {
+                    pagination = dataLength;
+                }
+
+                for (let i = 0; i < pagination; i++) {
                     toCreate.appendChild(createCard(slideTemplate, data[i]));
                 }
+
+                const btn = document.getElementById('loadMore');
+                btn.removeEventListener('clicl', function () {});
+                btn.addEventListener('click', function () {
+                    toCreate = document.createElement('div');
+                    let toAdd = 0;
+                    if (dataLength - pagination - loadSize > 0) {
+                        toAdd = loadSize;
+                    } else {
+                        toAdd = dataLength - pagination;
+                    }
+                    console.log(data);
+                    for (let i = pagination; i < pagination + toAdd; i++) {
+                        toCreate.appendChild(createCard(slideTemplate, data[i]));
+                    }
+                    pagination += toAdd;
+                    list.innerHTML += toCreate.innerHTML;
+                    lazyLoadImages();
+                    if (dataLength - pagination == 0) {
+                        this.style.display = 'none';
+                    }
+                });
+                
+                if (pagination >= dataLength) {
+                    btn.style.display = 'none';
+                }
+
+                // for (let i = 0; i < data.length; i++) {
+                //     toCreate.appendChild(createCard(slideTemplate, data[i]));
+                // }
 
                 list.innerHTML = '';
                 if (data.length == 0) {
