@@ -1,4 +1,4 @@
-import { fetchPage, getData, shuffleArray, lazyLoadImages, slider } from './Helper.js'
+// import { fetchPage, getData, shuffleArray, lazyLoadImages, slider } from './Helper.js'
 
 class Index {
     static page() {
@@ -80,4 +80,4 @@ class Index {
     };
 }
 
-export default Index
+// export default Index

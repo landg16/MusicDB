@@ -1,4 +1,4 @@
-import { fetchPage } from './Helper.js'
+// import { fetchPage } from './Helper.js'
 
 class About {
     static page() {
@@ -8,4 +8,4 @@ class About {
     };
 }
 
-export default About
+// export default About

@@ -1,4 +1,4 @@
-import { fetchPage, getData, shuffleArray, lazyLoadImages } from './Helper.js';
+// import { fetchPage, getData, shuffleArray, lazyLoadImages } from './Helper.js';
 
 class Albums {
     static page() {
@@ -153,4 +153,4 @@ class Albums {
     };
 }
 
-export default Albums;
+// export default Albums;

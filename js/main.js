@@ -1,9 +1,9 @@
-import Router from './modules/Router.js'
-import Index from './modules/Index.js'
-import About from './modules/About.js'
-import Artists from './modules/Artists.js'
-import Albums from './modules/Albums.js'
-import Tracks from './modules/Tracks.js'
+// import Router from './modules/Router.js'
+// import Index from './modules/Index.js'
+// import About from './modules/About.js'
+// import Artists from './modules/Artists.js'
+// import Albums from './modules/Albums.js'
+// import Tracks from './modules/Tracks.js'
 
 const router = new Router({
     root: '/',
